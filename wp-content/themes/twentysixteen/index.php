@@ -13,13 +13,19 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
+ include_once( ABSPATH . '/wp-content/plugins/Techtonic-WPPlugin/utils/DataAccess.php');
 
+
+ global $wpdb;
+ $user = wp_get_current_user();
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+		echo($user->user_nicename);
+		if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>

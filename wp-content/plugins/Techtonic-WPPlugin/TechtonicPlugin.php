@@ -10,7 +10,7 @@ Author URI: http://www.techtonicgroup.com
 $dir = TechtonicPlugin_dir();
 
 function TechtonicPlugin_init() {
-		 
+
 }
 
 
@@ -21,27 +21,27 @@ function settings() {
 	}
 
 	include_once (ABSPATH . "/wp-content/plugins/Techtonic-WPPlugin/views/settings.php");
-} 
+}
 
 
 function TechtonicPlugin_css(){
-	include_once  (ABSPATH . "/wp-content/plugins/Techtonic-WPPlugin/views/Common/header.php");
+	//include_once  (ABSPATH . "/wp-content/plugins/Techtonic-WPPlugin/views/Common/header.php");
 }
 
 function TechtonicPlugin_js() {
-	include_once (ABSPATH . "wp-content/plugins/Techtonic-WPPlugin/views/Common/footer.php");
+	//include_once (ABSPATH . "wp-content/plugins/Techtonic-WPPlugin/views/Common/footer.php");
 }
 
 function TechtonicPlugin_admin_js(){
-	include_once  (ABSPATH . "wp-content/plugins/Techtonic-WPPlugin/views/Common/admin-footer.php");
+//	include_once  (ABSPATH . "wp-content/plugins/Techtonic-WPPlugin/views/Common/admin-footer.php");
 }
 
 function TechtonicPlugin_activation() {
-	
+
 }
 
 function TechtonicPlugin_deactivation() {
-	
+
 }
 
 function add_interface_menu() {
@@ -50,7 +50,7 @@ function add_interface_menu() {
 	$capability = "10";
 	$menu_slug = "TechtonicPlugin";
 	$mainPage = "settings";
-	
+
 
 
 	add_menu_page($page_title, $menu_title, $capability, $menu_slug, $mainPage);
@@ -60,7 +60,7 @@ function add_interface_menu() {
 
 function TechtonicPlugin_dir() {
 	return dirname(__FILE__);
-} 
+}
 
 // Add initialization and activation hooks
 add_action('init', 'TechtonicPlugin_init');

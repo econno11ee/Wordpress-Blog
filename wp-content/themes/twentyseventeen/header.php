@@ -18,6 +18,11 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript"></script>
+<script src="wp-content\plugins\Techtonic-WPPlugin\views\Angular\app.js"></script>
+<script src="wp-content\plugins\Techtonic-WPPlugin\views\Angular\homefactory.js"></script>
+<script src="wp-content\plugins\Techtonic-WPPlugin\views\Angular\ng-controller-home.js"></script>
 
 <?php wp_head(); ?>
 </head>

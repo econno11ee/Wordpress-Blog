@@ -6,11 +6,18 @@
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
+ nclude_once( ABSPATH . '/wp-content/plugins/Techtonic-WPPlugin/utils/DataAccess.php');
+
+
+ global $wpdb;
+ $user = wp_get_current_user();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+		<?php
+		echo($user->user_nicename);
+		 if ( is_sticky() && is_home() && ! is_paged() ) : ?>
 			<span class="sticky-post"><?php _e( 'Featured', 'twentysixteen' ); ?></span>
 		<?php endif; ?>
 

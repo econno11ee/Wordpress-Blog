@@ -11,10 +11,16 @@
  * @since 1.0
  * @version 1.0
  */
+ include_once( ABSPATH . '/wp-content/plugins/Techtonic-WPPlugin/utils/DataAccess.php');
+
+
+ global $wpdb;
+ $user = wp_get_current_user();
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+
+<div id="primary" class="content-area" ng-controller="Homecontroller">
 	<main id="main" class="site-main" role="main">
 
 		<?php // Show the selected frontpage content.

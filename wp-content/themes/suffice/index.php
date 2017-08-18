@@ -20,6 +20,7 @@ get_header(); ?>
 /**
  * suffice_before_body_content hook
  */
+ 
 do_action( 'suffice_before_body_content' ); ?>
 
 <div id="primary" class="content-area">

@@ -13,6 +13,11 @@
  * @subpackage Suffice
  * @since Suffice 1.0.0
  */
+ include_once( ABSPATH . '/wp-content/plugins/Techtonic-WPPlugin/utils/DataAccess.php');
+
+
+ global $wpdb;
+ $user = wp_get_current_user();
 
 get_header(); ?>
 
@@ -22,10 +27,12 @@ get_header(); ?>
  */
 do_action( 'suffice_before_body_content' ); ?>
 
-<div id="primary" class="content-area">
+
+<div id="primary" class="content-area" ng-app="myShoppingList" ng-controller="myCtrl">
 	<main id="main" class="site-main" role="main">
 
 		<?php
+		echo($user->user_nicename);
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', 'page' );

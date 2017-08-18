@@ -7,6 +7,11 @@
  * @since 1.0
  * @version 1.0
  */
+ include_once( ABSPATH . '/wp-content/plugins/Techtonic-WPPlugin/utils/DataAccess.php');
+
+
+ global $wpdb;
+ $user = wp_get_current_user();
 
 ?>
 <div class="site-branding">
@@ -16,9 +21,9 @@
 
 		<div class="site-branding-text">
 			<?php if ( is_front_page() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo("Hello, " . ($user->user_nicename) . "!"); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo($user->user_nicename); ?></a></p>
 			<?php endif; ?>
 
 			<?php
