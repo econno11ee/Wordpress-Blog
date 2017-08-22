@@ -1,19 +1,16 @@
 app.factory('homefactory',function ($http) {
   return {
-      postTohomeController: function (Movie,callBack) {
-          var url = "http://localhost:50941/wp-content/plugins/Techtonic-WPPlugin/controllers/homeController.php?method=PostItem"
-          console.log(Movie)
+      postTohomeController: function (post) {
+
+          var url = "http://localhost:8080/wp-content/plugins/Techtonic-WPPlugin/controllers/homeController.php?method=postItem"
+          console.log(post)
           $http({
-              method: 'POST', url: url, data: Movie, headers: { 'Content-Type': 'application/json' }
+              method: 'POST', url: url, data: post, crossDomain: true,headers: { 'Content-Type': 'application/json' }
           }).
-              then(function (response) {
+              then(function ($response) {
+                  $window.alert("Success");
 
-
-                  callBack(response.statusText);
-
-
-
-              }).catch(function (response) {
+              }).catch(function ($response) {
               });
       }
   };

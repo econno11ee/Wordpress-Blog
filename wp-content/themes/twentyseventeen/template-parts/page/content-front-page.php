@@ -17,9 +17,10 @@
 			<input type="text" class="form-control" id="post_title" ng-model="post.post_title" name="post_title" required/>
 			<p class="label label-danger" ng-show="createForm.post_title.$invalid || createForm.post_title.$pristine">Required!</p>
 			</div>
+			<div class="form-group" ng-class="{ 'has-error' : createForm.post_author.$invalid || createForm.post_author.$pristine }">
 			<label>Post Content</label>
 			<input type="text" class="form-control" name="post_content" ng-model="post.post_content" placeholder="write your post here" />
-			</div>
+		</div>
 			<button ng-disabled="createForm.$invalid" type="submit" ng-click="submit(post)" class="btn btn-default">Submit</button>
 	</form>
 </div>

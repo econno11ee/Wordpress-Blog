@@ -8,7 +8,7 @@
  * @version 1.0
  * @author Nick
  */
-class Accessories
+class Accessory
 {
    $idAccessories;
    $Name;
